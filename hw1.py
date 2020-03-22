@@ -29,7 +29,8 @@ def poland_cases_by_date(day: int, month: int, year: int = 2020) -> int:
     """
     
     # Your code goes here (remove pass)
-    pass
+  result = confirmed_cases.loc[confirmed_cases["Country/Region"]=="Poland"][f"{month}/{day}/{year - 2000}"]
+  return result
 
 
 def top5_countries_by_date(day: int, month: int, year: int = 2020) -> List[str]:
